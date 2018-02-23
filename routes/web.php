@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'PagesController@index');
+Route::get('/About', 'PagesController@About');
+Route::get('/NBooks/how/{cat}', 'NBooksController@how');
+Route::resource('NBooks', 'NBooksController');
